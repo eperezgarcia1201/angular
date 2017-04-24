@@ -1,0 +1,13 @@
+<h1 class="doctitle text-center">{{ pageTitle }}</h1>
+<div class="container">
+		<div class="card" *ngFor="let doc of documents" style=" margin-bottom:10px ">
+					 <img width="100%" class="card-img-top" src="{{doc.image_url}}" alt="Card image cap">
+						<div class="card-block">
+								<h4 class="card-title">{{doc.title}}</h4>
+								<p class="card-text"> <small class="text-muted">Last Updated at: {{doc.updated_at | date}}</small></p>
+								<p class="card-text">{{doc.description}}</p>
+								<div>
+								<a class="btn btn-lg btn-primary" href="doc.file_url">Dowload file</a>
+								</div>
+						</div>
+</div>
